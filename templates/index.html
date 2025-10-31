@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So Sánh Giá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <a href="{{ url_for('index') }}" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12.94 8.12L12.23 7H9.77L9.06 8.12C8.62 8.8 8 9.95 8 11.23v1.54c0 .54.44.99 1 .99h6c.56 0 1-.45 1-.99v-1.54c0-1.28-.62-2.43-1.06-3.11zM11 11H9v-1h2v1zm4 0h-2v-1h2v1z" opacity=".3"/><path d="M21.41 11.41l-8.83-8.83c-.37-.37-.88-.58-1.41-.58H4c-1.1 0-2 .9-2 2v7.17c0 .53.21 1.04.59 1.41l8.83 8.83c.78.78 2.05.78 2.83 0l7.17-7.17c.78-.78.78-2.05 0-2.83zM13 21.99l-8.41-8.41V4h7.17l8.41 8.41-7.17 7.58z"/><path d="M6.5 6.5m-1.5 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0z"/><path d="M11 10H9v1h2v-1zm4 0h-2v1h2v-1zm-1.23-3H9.77l-.71 1.12C8.62 8.8 8 9.95 8 11.23v1.54c0 .54.44.99 1 .99h6c.56 0 1-.45 1-.99v-1.54c0-1.28-.62-2.43-1.06-3.11L13.23 7zM15 12h-2v-1h2v1z"/></svg>
+            So Sánh Giá
+        </a>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Tìm giá tốt nhất...">
+                <button id="search-button" aria-label="Tìm kiếm"></button>
+            </div>
+            <select id="sort-select">
+                <option value="default">Mặc định</option>
+                <option value="price_asc">Giá tăng dần</option>
+                <option value="price_desc">Giá giảm dần</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <nav id="category-nav">
+            </nav>
+        <section id="product-list">
+            </section>
+    </main>
+
+    <div id="pagination-controls"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column info">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12.94 8.12L12.23 7H9.77L9.06 8.12C8.62 8.8 8 9.95 8 11.23v1.54c0 .54.44.99 1 .99h6c.56 0 1-.45 1-.99v-1.54c0-1.28-.62-2.43-1.06-3.11zM11 11H9v-1h2v1zm4 0h-2v-1h2v1z" opacity=".3"/><path d="M21.41 11.41l-8.83-8.83c-.37-.37-.88-.58-1.41-.58H4c-1.1 0-2 .9-2 2v7.17c0 .53.21 1.04.59 1.41l8.83 8.83c.78.78 2.05.78 2.83 0l7.17-7.17c.78-.78.78-2.05 0-2.83zM13 21.99l-8.41-8.41V4h7.17l8.41 8.41-7.17 7.58z"/><path d="M6.5 6.5m-1.5 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0z"/><path d="M11 10H9v1h2v-1zm4 0h-2v1h2v-1zm-1.23-3H9.77l-.71 1.12C8.62 8.8 8 9.95 8 11.23v1.54c0 .54.44.99 1 .99h6c.56 0 1-.45 1-.99v-1.54c0-1.28-.62-2.43-1.06-3.11L13.23 7zM15 12h-2v-1h2v1z"/></svg>
+                    So Sánh Giá
+                </a>
+                <p>
+                    <b>Trụ sở chính:</b> 120 Phố Yên Lãng Thịnh Quang, Đống Đa, Hà Nội 
+                </p>
+                <p>
+                    <b>Email:</b> contact@sosanhgia.vn
+                </p>
+            </div>
+            <div class="footer-column links">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social">
+                <h4>Kết nối với chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 So Sánh Giá - Đã đăng ký bản quyền.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
